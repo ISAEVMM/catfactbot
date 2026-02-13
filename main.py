@@ -34,11 +34,8 @@ def send_to_admin(message):
 @bot.message_handler(commands=['start'])
 def start(message):
     chat_id = message.chat.id
-    # keyboard = types.ReplyKeyboardMarkup(resize_keyboard=True)
     keyboard = types.InlineKeyboardMarkup()
-    # btn_ru = types.KeyboardButton(text='in Russian')
     btn_ru = types.InlineKeyboardButton(text='in Russian', callback_data='ru')
-    # btn_eng = types.KeyboardButton(text='На английском  ')
     btn_eng = types.InlineKeyboardButton(text='На английском  ', callback_data='eng')
     btn_support = types.InlineKeyboardButton(text='Написать в поддержку',
     callback_data='support')
